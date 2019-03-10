@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d752fa55-5e04-4cf7-aa5b-de5dfa5c4c06" name="Default Changelist" comment="" />
+    <list default="true" id="d752fa55-5e04-4cf7-aa5b-de5dfa5c4c06" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../crawleForText/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CrawlerForBilibili/CrawlerForBilibili.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CrawlerForBilibili/CrawlerForBilibili.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CrawlerForBilibili/JDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CrawlerForBilibili/JDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrawlerForBilibili.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrawlerForBilibili.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/.idea/libraries/Maven__org_jsoup_jsoup_1_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/.idea/libraries/Maven__org_jsoup_jsoup_1_11_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/CrawlerForNovel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/CrawlerForNovel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/src/main/java/Html.java" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/src/main/java/Html.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/src/main/java/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/src/main/java/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/target/classes/Html.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/target/classes/Html.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/target/classes/JDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/target/classes/JDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawleForText/target/classes/META-INF/Demo.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/../crawleForText/target/classes/META-INF/CrawlerForNovel.kotlin_module" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CrawlerForBilibili.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="106" column="44" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+            <state relative-caret-position="1102">
+              <caret line="58" column="55" lean-forward="true" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConnectionUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="198">
               <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -35,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1465">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="-163">
+              <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,6 +72,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -65,18 +84,18 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="235" />
-    <option name="y" value="150" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="580" />
+    <option name="y" value="115" />
     <option name="width" value="1750" />
     <option name="height" value="970" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -88,17 +107,23 @@
             <path>
               <item name="CrawlerForBilibili" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrawlerForBilibili" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CrawlerForBilibili" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrawlerForBilibili" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551713616253" />
-    <property name="last_opened_file_path" value="E:/Jsoup jar包/jsoup-1.8.1.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552184635967" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -153,8 +178,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26340482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -163,7 +189,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.042432815" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13314448" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -190,19 +216,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JDBC.java">
+    <entry file="file://E:/Ollydbg/JDBC.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1465">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="-1197">
+          <folding>
+            <element signature="e#0#3095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CrawlerForBilibili.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="58" column="55" lean-forward="true" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/Ollydbg/JDBC (1).class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1402">
+          <folding>
+            <element signature="e#0#3095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConnectionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="198">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -210,10 +254,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrawlerForBilibili.java">
+    <entry file="file://$PROJECT_DIR$/src/JDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="106" column="44" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+        <state relative-caret-position="-163">
+          <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

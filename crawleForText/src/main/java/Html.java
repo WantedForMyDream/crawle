@@ -4,28 +4,112 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Html {
-
+public class Html{
     private static String title;
     private static String  author;
     private  static String des;
     private  static String img;
-    public static List<String> list1 = new ArrayList<String>();
-    public static List<String>list2=new ArrayList<String>();
+//    private static Chapter chapters;
+    private static List<String> list1 =new ArrayList<String>();//小说章节的标题
+    private static List<String>list2=new ArrayList<String>();//小说章节对应的网址
+//
+//    public Html(){
+//        title=null;
+//        author=null;
+//        des=null;
+//        img=null;
+//        chapters=new Chapter();
+//    }
+//
+//    public static void getNameAndUrlList() {
+//        //添加任务到线程池
+//        ExecutorService pool= Executors.newFixedThreadPool(5);
+//
+//        for(int i=0;i<10;i++)
+//        {
+//            pool.submit(new AddNameAndUrl());
+//        }
+//
+//        pool.shutdown();
+//    }
+//
+//    public static class AddNameAndUrl implements Runnable{
+//
+//        @Override
+//        public void run() {
+//            try {
+//                chapters.addList();//启动多线程任务
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//
+//    public static class Chapter {
+//        private static List<String> urlList=new ArrayList<String>();
+//        private static List<String> nameList=new ArrayList<String>();
+//        private static Lock lock=new ReentrantLock();
+//
+//        public List<String> getUrlList(){
+//            return urlList;
+//        }
+//
+//        public List<String> getNameList(){
+//            return nameList;
+//        }
+//
+//        public static void addList() throws IOException {
+//
+//            BufferedReader buffer = new BufferedReader(new InputStreamReader(HtmlUtils.getConnection("http://www.xbiquge.la/7/7004/").getInputStream()) );
+//
+//            //得到每一章节的标题和内容
+//            String line = null;
+//            String reg = "<dd><a href='([\\s\\S]+?)' >(.+?)</a></dd>";
+//            Pattern pattern = Pattern.compile(reg);
+//
+//            lock.lock();
+//            try{
+//                //matcher:匹配
+//                while (( line = buffer.readLine() ) != null) {
+//                    Matcher matcher = pattern.matcher(line);
+//                    while ( matcher.find() ) {
+//                        String string = matcher.group(2);
+//                        nameList.add(string);
+//
+//                        string=matcher.group(1);
+//                        urlList.add("http://www.xbiquge.la"+string);
+//                    }
+//                }
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            } finally {
+//                lock.unlock();
+//            }
+//            for(int i=0;i<nameList.size();i++)
+//            {
+//                System.out.println(nameList.get(i)+"\n"+urlList.get(i));
+//            }
+//        }
+//
+//    }
 
 
     public static void main(String[] args) throws IOException, SQLException {
-        // TODO Auto-generated method stub
-        getHeadElements();
+        geAndInserttHeadElements();
         getChapterNameAndURL();
         insertChapterNameAndURL();
         insertTXT();
     }
 
-    private static void getHeadElements() throws IOException, SQLException {
+    private static void geAndInserttHeadElements() throws IOException, SQLException {
 
         BufferedReader buffer = new BufferedReader(new InputStreamReader(HtmlUtils.getConnection("http://www.xbiquge.la/7/7004/").getInputStream()) );
 
@@ -59,31 +143,30 @@ public class Html {
 
             if(matcher1.find()){
                 title=matcher1.group(1).replace("content","").replace("=","").replace("\"","");
-                JDBC.insert("HeadElements","title",title);
+                JDBC.insert("HeadElements","Name","Content","title",title);
             }
 
             if(matcher2.find()){
                 author=matcher2.group(1).replace("content","").replace("=","").replace("\"","");
-                JDBC.insert("HeadElements","author",author);
+                JDBC.insert("HeadElements","Name","Content","author",author);
             }
 
             if(matcher3.find()){
                 des=matcher3.group(1).replace(" ","").replace("content","").replace("=","").replace("\"","");
-                JDBC.insert("HeadElements","desr",des);
+                JDBC.insert("HeadElements","Name","Content","desr",des);
             }
 
             if(matcher4.find()){
                 img=matcher4.group(2);
-                JDBC.insert("HeadElements","img",img);
+                JDBC.insert("HeadElements","Name","Content","img",img);
             }
     }
 
 
-    private static void getChapterNameAndURL( ) throws IOException, SQLException {
+    private static void getChapterNameAndURL() throws IOException, SQLException {
         // TODO Auto-generated method stub
 
         BufferedReader buffer = new BufferedReader(new InputStreamReader(HtmlUtils.getConnection("http://www.xbiquge.la/7/7004/").getInputStream()) );
-
 
         //得到每一章节的标题和内容
         String line = null;
@@ -93,15 +176,20 @@ public class Html {
         //matcher:匹配
         while (( line = buffer.readLine() ) != null) {
             Matcher matcher = pattern.matcher(line);
-            while ( matcher.find() ) {
+            while (matcher.find()) {
                 String string = matcher.group(2);
                 list1.add(string);
 
-                string=matcher.group(1);
-                list2.add("http://www.xbiquge.la"+string);
+                string = matcher.group(1);
+                list2.add("http://www.xbiquge.la" + string);
             }
         }
+        for(int i=0;i<list1.size();i++)
+        {
+            System.out.println(list1.get(i)+" "+list2.get(i));
+        }
     }
+
 
     //得到每一章小说的内容
     public static String getTXT(String string1) throws IOException {
@@ -146,7 +234,8 @@ public class Html {
         int i=0;
         for(String string:list2)
         {
-            JDBC.insert("content","Name","Content",list1.get(i),getTXT(string));
+            JDBC.insert("content","Name","Content",list1.get(i++),getTXT(string));
+            System.out.println(list1.get(i++)+"\n"+getTXT(string));
         }
     }
 

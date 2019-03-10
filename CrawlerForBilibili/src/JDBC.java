@@ -37,7 +37,7 @@ public class JDBC {
         int i = 0;
 
         //往数据库插入信息
-        String sql = "insert into stringname ("+str1+","+str2+") values(?,?)";
+        String sql = "insert into "+stringname+ "("+str1+","+str2+") values(?,?)";
         PreparedStatement pstmt=null;
 
         try {
@@ -49,33 +49,7 @@ public class JDBC {
                 pstmt.setString(1, list1.get(j));
                 pstmt.setString(2, list2.get(j));
                 i = pstmt.executeUpdate();
-                pstmt.close();
-                conn.commit();
-                conn.close();
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    static void insert( String stringname,String s,String str) throws SQLException {
-
-        Connection conn = getConn();
-        conn.setAutoCommit(false);
-        int i = 0;
-
-        //往数据库插入信息
-        String sql = "insert into stringname ("+s+") values(?)";
-        PreparedStatement pstmt=null;
-
-        try {
-
-            //表示预编译的sql对象
-            pstmt = (PreparedStatement) conn.prepareStatement(sql);
-
-            pstmt.setString(1, str);
-            i = pstmt.executeUpdate();
             pstmt.close();
             conn.commit();
             conn.close();
@@ -92,7 +66,7 @@ public class JDBC {
         int i = 0;
 
         //往数据库插入信息
-        String sql = "insert into stringname ("+s1+s2+") values(?,?)";
+        String sql = "insert into "+ stringname +"("+s1+","+s2+") values(?,?)";
         PreparedStatement pstmt=null;
 
         try {
